@@ -27,30 +27,30 @@ public class Generate {
         }
         File inputDir = new File(args[0]);
         File outputDir = new File(args[1]);
-        generate(inputDir, outputDir, "TPObjectHashMap.template", "src/gnu/trove/T", "ObjectHashMap.java");
-        generate(inputDir, outputDir, "TObjectPHashMap.template", "src/gnu/trove/TObject", "HashMap.java");
-        generate(inputDir, outputDir, "TArrayList.template", "src/gnu/trove/T", "ArrayList.java");
-        generate(inputDir, outputDir, "THashingStrategy.template", "src/gnu/trove/T", "HashingStrategy.java");
-        generate(inputDir, outputDir, "TPHash.template", "src/gnu/trove/T", "Hash.java");
-        generate(inputDir, outputDir, "TPHashSet.template", "src/gnu/trove/T", "HashSet.java");
-        generate(inputDir, outputDir, "TPIterator.template", "src/gnu/trove/T", "Iterator.java");
-        generate(inputDir, outputDir, "TPFunction.template", "src/gnu/trove/T", "Function.java");
-        generate(inputDir, outputDir, "TPProcedure.template", "src/gnu/trove/T", "Procedure.java");
-        generate(inputDir, outputDir, "TObjectPIterator.template", "src/gnu/trove/TObject", "Iterator.java");
-        generate(inputDir, outputDir, "TPObjectIterator.template", "src/gnu/trove/T", "ObjectIterator.java");
-        generate(inputDir, outputDir, "TPObjectProcedure.template", "src/gnu/trove/T", "ObjectProcedure.java");
-        generate(inputDir, outputDir, "TObjectPProcedure.template", "src/gnu/trove/TObject", "Procedure.java");
+        generate(inputDir, outputDir, "TPObjectHashMap.template", "gnu/trove/T", "ObjectHashMap.java");
+        generate(inputDir, outputDir, "TObjectPHashMap.template", "gnu/trove/TObject", "HashMap.java");
+        generate(inputDir, outputDir, "TArrayList.template", "gnu/trove/T", "ArrayList.java");
+        generate(inputDir, outputDir, "THashingStrategy.template", "gnu/trove/T", "HashingStrategy.java");
+        generate(inputDir, outputDir, "TPHash.template", "gnu/trove/T", "Hash.java");
+        generate(inputDir, outputDir, "TPHashSet.template", "gnu/trove/T", "HashSet.java");
+        generate(inputDir, outputDir, "TPIterator.template", "gnu/trove/T", "Iterator.java");
+        generate(inputDir, outputDir, "TPFunction.template", "gnu/trove/T", "Function.java");
+        generate(inputDir, outputDir, "TPProcedure.template", "gnu/trove/T", "Procedure.java");
+        generate(inputDir, outputDir, "TObjectPIterator.template", "gnu/trove/TObject", "Iterator.java");
+        generate(inputDir, outputDir, "TPObjectIterator.template", "gnu/trove/T", "ObjectIterator.java");
+        generate(inputDir, outputDir, "TPObjectProcedure.template", "gnu/trove/T", "ObjectProcedure.java");
+        generate(inputDir, outputDir, "TObjectPProcedure.template", "gnu/trove/TObject", "Procedure.java");
 
-        generateKV(inputDir, outputDir, "TKVIterator.template", "src/gnu/trove/T", "Iterator.java");
-        generateKV(inputDir, outputDir, "TKVProcedure.template", "src/gnu/trove/T", "Procedure.java");
-        generateKV(inputDir, outputDir, "TKVHashMap.template", "src/gnu/trove/T", "HashMap.java");
+        generateKV(inputDir, outputDir, "TKVIterator.template", "gnu/trove/T", "Iterator.java");
+        generateKV(inputDir, outputDir, "TKVProcedure.template", "gnu/trove/T", "Procedure.java");
+        generateKV(inputDir, outputDir, "TKVHashMap.template", "gnu/trove/T", "HashMap.java");
 
 
-        generateKV(inputDir, outputDir, "TPPMapDecorator.template", "src/gnu/trove/decorator/T", "HashMapDecorator.java");
+        generateKV(inputDir, outputDir, "TPPMapDecorator.template", "gnu/trove/decorator/T", "HashMapDecorator.java");
 
-        generate(inputDir, outputDir, "TPObjectMapDecorator.template", "src/gnu/trove/decorator/T", "ObjectHashMapDecorator.java");
-        generate(inputDir, outputDir, "TObjectPMapDecorator.template", "src/gnu/trove/decorator/TObject", "HashMapDecorator.java");
-        generate(inputDir, outputDir, "TPHashSetDecorator.template", "src/gnu/trove/decorator/T", "HashSetDecorator.java");
+        generate(inputDir, outputDir, "TPObjectMapDecorator.template", "gnu/trove/decorator/T", "ObjectHashMapDecorator.java");
+        generate(inputDir, outputDir, "TObjectPMapDecorator.template", "gnu/trove/decorator/TObject", "HashMapDecorator.java");
+        generate(inputDir, outputDir, "TPHashSetDecorator.template", "gnu/trove/decorator/T", "HashSetDecorator.java");
     }
 
     private static void generate(File inputDir, File outputDir, String templateName, String pathPrefix, String pathSuffix) throws IOException {
