@@ -6,13 +6,25 @@
 
 	<groupId>consulo.internal</groupId>
 	<artifactId>trove4j</artifactId>
-	<version>2.0</version>
+	<version>2.1</version>
 
 	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>consulo</id>
+			<url>https://maven.consulo.io/repository/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<build>
 		<plugins>
@@ -27,6 +39,31 @@
 					<showWarnings>true</showWarnings>
 					<fork>true</fork>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>consulo.maven</groupId>
+				<artifactId>java9-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<extensions>true</extensions>
+				<configuration>
+					<module>
+						<name>gnu.trove</name>
+						<exports>
+							<export>
+								<package>gnu.trove</package>
+							</export>
+						</exports>
+					</module>
+				</configuration>
+				<executions>
+					<execution>
+						<id>pre-java9</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>generate-binary-module-info-nocheck</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
